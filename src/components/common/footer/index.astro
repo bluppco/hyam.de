@@ -1,11 +1,45 @@
 ---
-
 // IMPORTS ASTRO LAYOUTS
 import Container from "@/layouts/Container.astro"
 
+// IMPORTS ASTRO COMPONENTS
+import Li from "./li/index.astro"
+import TargetBlankLi from "./li/target-blank/index.astro"
 ---
-<footer class="bg-hyam_neon py-20">
+<footer class="bg-hyam_neon">
     <Container>
-        <p class="text-white">I am footer</p>
+        <section class="grid grid-cols-3 gap-4 border-y border-black py-3">
+            <section class="grid grid-cols-1 gap-x-12">
+                <ul class="grid grid-cols-2 gap-x-12 pb-3">
+                    <TargetBlankLi href="https://www.instagram.com/hyamstudiosberlin/" aria_label="">Instagram</TargetBlankLi>
+                    <TargetBlankLi href="https://www.linkedin.com/company/hyamstudios" aria_label="">Linkedin</TargetBlankLi>
+                </ul>
+                <ul class="grid grid-cols-2 gap-x-12 border-t pt-3 border-black">
+                    <Li href="/corporate-design-agentur" aria_label="">Corporate Design</Li>
+                    <Li href="/e-commerce-agentur" aria_label="">E-Commerce</Li>
+                </ul>
+            </section>
+            <section class="flex justify-center items-center">
+                <p class="font-lausanne font-light uppercase">Newsletter anmelden</p>
+            </section>
+            <section class="grid grid-cols-1 gap-x-12">
+                <ul class="grid grid-cols-2 gap-x-12 pb-3">
+                    <Li href="/social-media-agency" aria_label="">Social Media</Li>
+                    <Li href="/branding-agency-berlin" aria_label="">Branding</Li>
+                </ul>
+                <ul class="grid grid-cols-2 gap-x-12 border-t pt-3 border-black">
+                    <Li href="/tiktok-agentur" aria_label="">TikTok</Li>
+                    <Li href="/employer-branding-agentur" aria_label="">Employer Branding</Li>
+                </ul>
+            </section>
+        </section>
+        <section class="flex gap-6 items-center justify-end py-6">
+            <p>&copy; HY.AM Studios { new Date().getFullYear() }</p>
+            <ul class="flex gap-6 items-center">
+                <Li>Cookies</Li>
+                <Li href="/imprint" aria_label="">Imprint</Li>
+                <Li href="/privacy-policy" aria_label="">Privacy Policy</Li>
+            </ul>
+        </section>
     </Container>
 </footer>
