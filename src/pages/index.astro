@@ -5,11 +5,11 @@ import Layout from "@/layouts/Layout.astro"
 
 // IMPORT COMMON COMPONENTS
 import Footer from "@/components/common/footer/index.astro"
-import Header from "@/components/common/header/index.astro"
+import Header from "@/components/common/header/index"
 import HeaderBanner from "@/components/common/header-banner/index.astro"
 
-// HOME COMPONENTS
-import Home from "@/components/home/index.astro"
+// IMPORTS ASTRO COMPONENTS
+import Hero from "@/components/home/hero/index.astro"
 
 ---
 <Layout
@@ -17,8 +17,10 @@ import Home from "@/components/home/index.astro"
 	image=""
 	title=""
 >
-	<HeaderBanner/>
-	<Header/>
-	<Home/>
+	<section class="h-screen max-h-screen overflow-hidden">
+		<HeaderBanner/>
+		<Header client:load />
+		<Hero />
+	</section>
 	<Footer/>
 </Layout>
