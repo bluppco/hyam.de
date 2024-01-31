@@ -51,6 +51,7 @@ module.exports = {
 			},
 			fontFamily: {
 
+				"lausanne": ["Lausanne", "serif"]
 
 			}
 
