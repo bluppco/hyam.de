@@ -5,14 +5,13 @@ import Video from "@/atoms/video/index.astro"
 const {
 
     src,
-    alt,
     name,
     title,
     size
 
 } = Astro.props
 ---
-<div class="space-y-1">
+<div class="space-y-1 overflow-hidden">
     <div class={ size }>
         <Video>
             <source src={ src } type="video/mp4"/>
@@ -21,5 +20,5 @@ const {
     <div class="pt-4">
         <p class="font-lausanne font-light uppercase">{ name }</p>
     </div>
-    <p class="text-4xl font-lausanne font-light uppercase">{ title }</p>
+    <p class="text-lg md:text-4xl font-lausanne font-light uppercase">{ title }</p>
 </div>

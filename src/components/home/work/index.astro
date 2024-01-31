@@ -7,8 +7,8 @@ import WorkItem from "./work-item/index.astro"
 import VideoWorkItem from "./video-item/index.astro"
 ---
 <Container>
-    <section class="py-8">
-        <div class="flex justify-end">
+    <section class="py-8 space-y-20">
+        <div class="flex md:justify-end">
             <WorkItem
                 src="/lala-berlin.avif"
                 alt=""
@@ -17,25 +17,14 @@ import VideoWorkItem from "./video-item/index.astro"
                 size="w-[640px] h-screen"
             />
         </div>
-        <div class="">
-            <VideoWorkItem
-                src="hero-video.mp4"
-                alt=""
-                name="lala Berlin"
-                title="Celebrating Differences"
-                size="w-[520px] h-[660px]"
-            />
-        </div>
-        <!-- <div class="">
-            <WorkItem
-                src="/lala-berlin.avif"
-                alt=""
-                name="lala Berlin"
-                title="Celebrating Differences"
-                size="w-[520px] h-[660px]"
-            />
-        </div> -->
-        <div class="flex justify-end py-20">
+        <VideoWorkItem
+            src="hero-video.mp4"
+            alt=""
+            name="lala Berlin"
+            title="Celebrating Differences"
+            size="w-[520px] h-[660px]"
+        />
+        <div class="flex justify-end md:py-20">
             <VideoWorkItem
                 src="hero-video.mp4"
                 alt=""
@@ -44,16 +33,14 @@ import VideoWorkItem from "./video-item/index.astro"
                 size="w-[920px] h-[520px]"
             />
         </div>
-        <div class="">
-            <VideoWorkItem
-                src="hero-video.mp4"
-                alt=""
-                name="lala Berlin"
-                title="Celebrating Differences"
-                size="w-[520px] h-[660px]"
-            />
-        </div>
-        <div class="flex justify-end">
+        <VideoWorkItem
+            src="hero-video.mp4"
+            alt=""
+            name="lala Berlin"
+            title="Celebrating Differences"
+            size="w-[520px] h-[660px]"
+        />
+        <div class="flex md:justify-end">
             <VideoWorkItem
                 src="hero-video.mp4"
                 alt=""
