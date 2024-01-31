@@ -1,0 +1,24 @@
+---
+const {
+
+    src,
+    alt,
+    name,
+    title,
+    size
+
+} = Astro.props
+---
+<div class="space-y-1">
+    <div class={ size }>
+        <img
+            src={ src }
+            alt={ alt }
+            class="w-full h-full"
+        />
+    </div>
+    <div class="pt-4">
+        <p class="font-lausanne font-light uppercase">{ name }</p>
+    </div>
+    <p class="text-4xl font-lausanne font-light uppercase">{ title }</p>
+</div>
