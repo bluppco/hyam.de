@@ -1,0 +1,53 @@
+---
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/Container.astro"
+
+// IMPORTS ASTRO COMPONENTS
+import WorkItem from "./work-item/index.astro"
+import VideoWorkItem from "./video-item/index.astro"
+---
+<Container>
+    <section class="pb-8 space-y-20">
+        <div class="flex md:justify-end">
+            <WorkItem
+                src="/lala-berlin.avif"
+                alt=""
+                name="lala Berlin"
+                title="Celebrating Differences"
+                size="w-[620px] h-[820px]"
+            />
+        </div>
+        <VideoWorkItem
+            src="hero-video.mp4"
+            alt=""
+            name="lala Berlin"
+            title="Celebrating Differences"
+            size="w-[510px] h-[680px]"
+        />
+        <div class="flex justify-end md:py-20">
+            <VideoWorkItem
+                src="hero-video.mp4"
+                alt=""
+                name="lala Berlin"
+                title="Celebrating Differences"
+                size="w-[950px] h-[530px]"
+            />
+        </div>
+        <VideoWorkItem
+            src="hero-video.mp4"
+            alt=""
+            name="lala Berlin"
+            title="Celebrating Differences"
+            size="w-[510px] h-[680px]"
+        />
+        <div class="flex md:justify-end">
+            <VideoWorkItem
+                src="hero-video.mp4"
+                alt=""
+                name="lala Berlin"
+                title="Celebrating Differences"
+                size="w-[510px] h-[680px]"
+            />
+        </div>
+    </section>
+</Container>

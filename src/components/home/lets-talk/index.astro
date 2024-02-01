@@ -1,0 +1,37 @@
+---
+// IMPORTS ASTRO ATOMS
+import Button from "@/atoms/button/arrow/index.astro"
+import Link from "@/atoms/links/index.astro"
+import Container from "@/layouts/Container.astro";
+
+const data = {
+
+    title: "Do you have a cool idea or a new project that you would like to talk about?",
+    sub_title: "Let's Make Great Things Together",
+    button_text: "Let's talk?",
+    button_link: "/contact"
+
+}
+---
+<section class="bg-hyam_neon py-10 md:py-20">
+    <Container>
+        <section class="flex flex-col items-center gap-12">
+            <p class="text-xl md:text-4xl text-center font-lausanne font-light uppercase">{ data.title }</p>
+            <div>
+                <p class="text-3xl md:text-8xl font-lausanne font-light uppercase text-center">Let's Make</p>
+                <p class="text-3xl md:text-8xl font-lausanne font-light uppercase text-center">Great Things</p>
+                <p class="text-3xl md:text-8xl font-lausanne font-light uppercase text-center">Together</p>
+            </div>
+            <Link href={ data.button_link } aria_label="">
+                <Button>{ data.button_text }</Button>
+            </Link>
+            <div class="size-40 mt-10">
+                <img
+                    src="/flower.avif"
+                    alt=""
+                    class="size-40"
+                />
+            </div>
+        </section>
+    </Container>
+</section>

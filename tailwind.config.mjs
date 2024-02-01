@@ -47,10 +47,12 @@ module.exports = {
 			},
 			colors: {
 
+				"hyam_neon" : "#DBFF00"
 
 			},
 			fontFamily: {
 
+				"lausanne": ["Lausanne", "serif"]
 
 			}
 
