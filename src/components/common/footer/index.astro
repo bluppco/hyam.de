@@ -5,6 +5,7 @@ import Container from "@/layouts/Container.astro"
 // IMPORTS ASTRO COMPONENTS
 import Li from "./li/index.astro"
 import TargetBlankLi from "./li/target-blank/index.astro"
+import RightAlignLi from "./li/right-align/index.astro"
 ---
 <footer class="bg-hyam_neon">
     <Container>
@@ -24,12 +25,12 @@ import TargetBlankLi from "./li/target-blank/index.astro"
             </section>
             <section class="grid grid-cols-1 gap-x-12">
                 <ul class="grid md:grid-cols-2 gap-x-12 pb-3">
-                    <Li href="/social-media-agency" aria_label="">Social Media</Li>
-                    <Li href="/branding-agency-berlin" aria_label="">Branding</Li>
+                    <RightAlignLi href="/social-media-agency" aria_label="">Social Media</RightAlignLi>
+                    <RightAlignLi href="/branding-agency-berlin" aria_label="">Branding</RightAlignLi>
                 </ul>
                 <ul class="grid md:grid-cols-2 gap-x-12 border-t pt-3 border-black">
-                    <Li href="/tiktok-agentur" aria_label="">TikTok</Li>
-                    <Li href="/employer-branding-agentur" aria_label="">Employer Branding</Li>
+                    <RightAlignLi href="/tiktok-agentur" aria_label="">TikTok</RightAlignLi>
+                    <RightAlignLi href="/employer-branding-agentur" aria_label="">Employer Branding</RightAlignLi>
                 </ul>
             </section>
         </section>
