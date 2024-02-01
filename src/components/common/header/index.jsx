@@ -9,6 +9,7 @@ import Container from "@/layouts/Container"
 
 // IMPORTS COMPONENTS
 import Li from "./li/index"
+import HeaderMobile from "../mobile-header/index"
 
 const Header = () => {
 
@@ -74,6 +75,7 @@ const Header = () => {
                     </Container>
                 </motion.header>
             </header>
+            <HeaderMobile />
         </>
     )
 
