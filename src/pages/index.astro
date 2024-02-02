@@ -5,7 +5,7 @@ const runtime = Astro.locals.runtime
 const data = await homeAPI( runtime.env.ENVIRONMENT )
 const env = runtime.env.ENVIRONMENT
 
-const { home_data, work, meta_tags } = data
+const { home_data, work, meta } = data
 
 // IMPORT LAYOUT COMPONENTS
 import Layout from "@/layouts/Layout.astro"
@@ -22,9 +22,9 @@ import Work from "@/components/home/work/index.astro"
 import LetsTalk from "@/components/home/lets-talk/index.astro"
 ---
 <Layout
-	description=""
-	image=""
-	title=""
+	description={ meta.description }
+	image={ meta.cover }
+	title={ meta.title }
 >
 	<section class="h-screen max-h-screen overflow-hidden">
 		<HeaderBanner />

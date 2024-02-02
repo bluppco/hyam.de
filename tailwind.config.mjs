@@ -47,7 +47,8 @@ module.exports = {
 			},
 			colors: {
 
-				"hyam_neon" : "#DBFF00"
+				"hyam_neon": "#DBFF00",
+				"hyam_dark_blue": "#1C01D1",
 
 			},
 			fontFamily: {

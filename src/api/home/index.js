@@ -8,7 +8,7 @@ export const homeAPI = async ( environment ) => {
     const network_data = await fetch( endpoint + "/home" )
     const data_json = await network_data.json()
 
-    const { home, work, meta_tags } = data_json.data
+    const { home, work, meta } = data_json.data
 
     let home_data = {
 
@@ -29,6 +29,6 @@ export const homeAPI = async ( environment ) => {
 
     })
 
-    return { home_data, work, meta_tags }
+    return { home_data, work, meta }
 
 }
