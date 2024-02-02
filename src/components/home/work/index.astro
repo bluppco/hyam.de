@@ -5,10 +5,50 @@ import Container from "@/layouts/Container.astro"
 // IMPORTS ASTRO COMPONENTS
 import WorkItem from "./work-item/index.astro"
 import VideoWorkItem from "./video-item/index.astro"
+
+const { data } = Astro.props
 ---
 <Container>
     <section class="pb-8 space-y-20">
-        <div class="flex md:justify-end">
+        {
+
+            data.map( ( value, index ) => {
+
+                if ( index < 1 ) {
+
+                    return(
+                        <div class="flex justify-end">
+                            <WorkItem
+                                src="/lala-berlin.avif"
+                                alt={ value.name }
+                                name={ value.name }
+                                title={ value.title }
+                                size="w-[620px] h-[820px]"
+                            />
+                        </div>
+                    )
+                }
+
+                else {
+
+                    return(
+                        <div class={` ${ index === 4 ? "flex md:justify-end" : "" } ${ index === 2 ? "flex md:justify-end md:py-20" : "" } `}>
+                            <VideoWorkItem
+                                src="/lala-berlin.avif"
+                                alt={ value.name }
+                                name={ value.name }
+                                title={ value.title }
+                                size={` ${ index === 1 || index === 3 || index === 4 ? "w-[510px] h-[680px]" : "" } ${ index === 2 ? "w-[950px] h-[530px]" : "" } `}
+                            />
+                        </div>
+                    )
+
+                }
+
+            })
+
+        }
+        <!-- <div class="flex md:justify-end">
             <WorkItem
                 src="/lala-berlin.avif"
                 alt=""
@@ -16,8 +56,8 @@ import VideoWorkItem from "./video-item/index.astro"
                 title="Celebrating Differences"
                 size="w-[620px] h-[820px]"
             />
-        </div>
-        <div>
+        </div> -->
+        <!-- <div>
             <VideoWorkItem
                 src="hero-video.mp4"
                 alt=""
@@ -50,6 +90,6 @@ import VideoWorkItem from "./video-item/index.astro"
                 title="Celebrating Differences"
                 size="w-[510px] h-[680px]"
             />
-        </div>
+        </div> -->
     </section>
 </Container>
