@@ -2,16 +2,11 @@
 // IMPORTS ASTRO ATOMS
 import Button from "@/atoms/button/arrow/index.astro"
 import Link from "@/atoms/links/index.astro"
-import Container from "@/layouts/Container.astro";
 
-const data = {
+// IMPORTS ASTRO LAYOUTS
+import Container from "@/layouts/Container.astro"
 
-    title: "Do you have a cool idea or a new project that you would like to talk about?",
-    sub_title: "Let's Make Great Things Together",
-    button_text: "Let's talk?",
-    button_link: "/contact"
-
-}
+const { data } = Astro.props
 ---
 <section class="bg-hyam_neon py-10 md:py-20">
     <Container>
