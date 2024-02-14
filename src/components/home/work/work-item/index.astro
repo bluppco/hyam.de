@@ -1,4 +1,5 @@
 ---
+import { CDN_LINK, IMAGE_QUALITY } from "@/constants/image";
 const {
 
     src,
@@ -12,7 +13,7 @@ const {
 <div class="space-y-2 overflow-hidden">
     <div class={ size }>
         <img
-            src={ src }
+            src={ CDN_LINK + src + "?quality=" + IMAGE_QUALITY }
             alt={ alt }
             class="w-full h-full overflow-hidden"
             style="cursor:url(cursor.svg), auto;"
