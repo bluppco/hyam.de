@@ -1,4 +1,12 @@
 ---
+import { homeAPI } from "../api/home"
+
+const runtime = Astro.locals.runtime
+const data = await homeAPI( runtime.env.ENVIRONMENT )
+const env = runtime.env.ENVIRONMENT
+
+const { home_data, work, meta } = data
+
 // IMPORT LAYOUT COMPONENTS
 import Layout from "@/layouts/Layout.astro"
 
@@ -14,17 +22,17 @@ import Work from "@/components/home/work/index.astro"
 import LetsTalk from "@/components/home/lets-talk/index.astro"
 ---
 <Layout
-	description=""
-	image=""
-	title=""
+	description={ meta.description }
+	image={ meta.cover }
+	title={ meta.title }
 >
 	<section class="h-screen max-h-screen overflow-hidden">
 		<HeaderBanner />
 		<Header client:load />
-		<Hero />
+		<Hero data={ home_data.hero } />
 	</section>
-	<About />
-	<Work />
-	<LetsTalk />
+	<About data={ home_data.about } />
+	<Work data={ work } />
+	<LetsTalk data={ home_data.lets_talk } />
 	<Footer />
 </Layout>

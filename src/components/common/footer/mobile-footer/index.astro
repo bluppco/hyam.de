@@ -3,15 +3,14 @@
 import Container from "@/layouts/Container.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import Li from "./li/index.astro"
-import TargetBlankLi from "./li/target-blank/index.astro"
-import RightAlignLi from "./li/right-align/index.astro"
-import MobileFooter from "./mobile-footer/index.astro"
+import Li from "../li/index.astro"
+import TargetBlankLi from "../li/target-blank/index.astro"
+import RightAlignLi from "../li/right-align/index.astro"
 
 // IMPORTS ASTRO COMPONENTS
-import WinksCounter from "./winks/index"
+import WinksCounter from "../winks/index"
 ---
-<footer class="bg-hyam_neon hidden md:block">
+<footer class="bg-hyam_neon md:hidden">
     <Container>
         <section class="grid grid-cols-3 gap-4 border-y border-black py-3">
             <section class="grid grid-cols-1 gap-x-12">
@@ -38,25 +37,24 @@ import WinksCounter from "./winks/index"
                 </ul>
             </section>
         </section>
-        <section class="flex items-center justify-between py-6">
+        <section class="flex flex-col items-center py-6">
             <section class="flex items-center gap-6">
-                <div class="py-1 px-1.5 border border-black rounded-full bg-black">
+                <div class="py-3 px-3.5 border border-black rounded-full bg-black">
                     <p class="text-hyam_neon cursor-pointer">EN</p>
                 </div>
-                <div class="group py-1 px-1.5 border border-black rounded-full bg-transparent hover:bg-black">
+                <WinksCounter client:load />
+                <div class="group py-3 px-3.5 border border-black rounded-full bg-transparent hover:bg-black">
                     <p class="group-hover:text-hyam_neon cursor-pointer">DE</p>
                 </div>
-                <WinksCounter client:load />
             </section>
             <section class="flex gap-6 items-center">
-                <p>&copy; HY.AM Studios { new Date().getFullYear() }</p>
                 <ul class="flex gap-6 items-center">
                     <Li>Cookies</Li>
                     <Li href="/imprint" aria_label="">Imprint</Li>
                     <Li href="/privacy-policy" aria_label="">Privacy Policy</Li>
                 </ul>
             </section>
+            <p>&copy; HY.AM Studios { new Date().getFullYear() }</p>
         </section>
     </Container>
 </footer>
-<MobileFooter />

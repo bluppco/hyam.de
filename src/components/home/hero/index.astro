@@ -1,8 +1,10 @@
 ---
 // IMPORTS ASTRO ATOMS
 import Video from "@/atoms/video/index.astro"
+
+const { data } = Astro.props
 ---
-<section class="h-full w-full">
+<section class="h-full w-full bg-zinc-200 overflow-hidden">
     <Video>
         <source src={ "/hero-video.mp4" } type="video/mp4"/>
     </Video>
